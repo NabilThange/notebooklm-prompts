@@ -1,5 +1,5 @@
 # NotebookLM Style Library
-> Field-tested prompts for NotebookLM / Kael.im slide generation
+> Field-tested prompts for NotebookLM slide generation
 
 ---
 

@@ -1,12 +1,12 @@
 # Awesome NotebookLM Templates
-### TRY [Kael.im](https://kael.im/home)(NotebookLM slides alternative) and register at this link for 100 pages free daily quota (nbp)!
+
 ![repo_banner](https://hackmd.io/_uploads/HJdglgwrZe.png)
 ![Awesome](https://awesome.re/badge.svg)
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 
 
 NotebookLM Slide Prompt⚡️
-> A curated collection of the strongest NotebookLM & Kael.im slide prompts sourced from the real creative underground — Note, WeChat, blogs, RED creators, and Twitter/X power users.
+> A curated collection of the strongest NotebookLM slide prompts sourced from the real creative underground — Note, WeChat, blogs, RED creators, and Twitter/X power users.
 
 These prompts are field-tested by people who ship fast: **researchers, founders, designers**. Use them to turn papers, notes, transcripts, or random brain dumps into **clean, structured, presentation-ready decks** that actually look intentional.
 

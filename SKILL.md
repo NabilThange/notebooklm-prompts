@@ -1,10 +1,10 @@
 ---
 name: notebooklm-prompt-designer
 description: >
-  Transforms any uploaded screenshot, image, or topic description into a complete, ready-to-paste NotebookLM / Kael.im slide or infographic prompt with a full design system. Use this skill whenever the user:
+  Transforms any uploaded screenshot, image, or topic description into a complete, ready-to-paste NotebookLM slide or infographic prompt with a full design system. Use this skill whenever the user:
   - Uploads a screenshot, photo, document, or any image and wants a NotebookLM slide or infographic prompt from it
   - Asks to "make slides from this", "create a NotebookLM prompt", "design a deck", "make a presentation prompt", or "generate an infographic prompt"
-  - Mentions NotebookLM, Kael.im, slides, deck, or presentation design
+  - Mentions NotebookLM, slides, deck, or presentation design
   - Wants to turn any content (article, notes, data, research, idea) into a designed slide prompt
   - Asks to pick a style or design system for a presentation
   Always use this skill for these tasks — even if the user just says "make me a prompt for this" with an image attached.
@@ -12,7 +12,28 @@ description: >
 
 # NotebookLM Prompt Designer
 
-You turn screenshots, images, topics, or notes into **complete, copy-paste-ready NotebookLM / Kael.im slide prompts** with a full design system — zero guesswork for the user.
+You turn screenshots, images, topics, or notes into **complete, copy-paste-ready NotebookLM slide prompts** with a full design system — zero guesswork for the user.
+
+## ⚠️ CRITICAL: CHARACTER LIMIT CONSTRAINT
+
+**NotebookLM has a strict 5000 character input limit.** Every prompt you generate MUST stay under this limit.
+
+### Character Budget Guidelines:
+- **Content Brief:** 150-300 characters (2-3 sentences)
+- **Design System:** 2500-3500 characters (the core prompt)
+- **Slide Structure:** 400-600 characters (8-10 slides with titles)
+- **Language/Tone:** 100-150 characters
+- **Alternative Style:** 150-200 characters
+- **Total Target:** 4000-4800 characters (leaving buffer for user edits)
+
+### Optimization Strategies:
+1. **Use concise design system prompts** - Remove verbose explanations, keep only essential instructions
+2. **Limit slide suggestions to 8-10 slides** - Not 12+
+3. **Keep slide titles short** - 40-60 characters max per slide
+4. **Compress repetitive instructions** - Say it once, not multiple times
+5. **Remove unnecessary formatting** - Minimize decorative separators
+
+**ALWAYS validate character count before outputting.** If over 4800 characters, compress the design system section first.
 
 ---
 
@@ -64,9 +85,9 @@ Recommend **1 primary style** and **1 alternative** based on the content. For ea
 | B2B SaaS, HR tools, marketplace products | G7: SaaS Friendly Bold |
 | Creative agency, youth brand, playful SaaS | G8: French Candy Brutalist |
 
-### Step 3 — Generate the Complete Prompt
+### Step 3 — Generate the Complete Prompt (Under 5000 Characters)
 
-Output a **single, complete, ready-to-paste prompt** structured as follows:
+Output a **single, complete, ready-to-paste prompt** that stays under 5000 characters. Structure as follows:
 
 ```
 ═══════════════════════════════════════════
@@ -81,7 +102,7 @@ Style: [Style Name] | Language: [Detected/User Language]
 [The complete design system prompt for the chosen style, with all placeholders resolved — replace "(the language what users requested in the prompt)" with the actual language, fill in any content-specific details]
 
 [SLIDE STRUCTURE SUGGESTION]
-Suggested slide breakdown:
+Suggested slide breakdown (8-10 slides):
 - Slide 1: [Cover — suggest a punchy title]
 - Slide 2-3: [Context / Problem]
 - Slide 4-6: [Main content / Key points]
@@ -104,6 +125,21 @@ Reason: [One sentence]
 
 ## KEY RULES FOR PROMPT GENERATION
 
+**CHARACTER LIMIT ENFORCEMENT:** Every prompt MUST be under 5000 characters. Before outputting, mentally estimate:
+- Content Brief: ~200 chars
+- Design System: ~3000 chars (this is your main compression target)
+- Slide Structure: ~500 chars
+- Language/Tone: ~100 chars
+- Alternative: ~150 chars
+- Formatting/separators: ~200 chars
+- **Total: ~4150 characters** (safe buffer)
+
+If your prompt exceeds 4800 characters, compress the design system by:
+1. Removing redundant explanations
+2. Shortening layout variation descriptions
+3. Combining similar rules
+4. Using more concise language
+
 **Always resolve ALL placeholders:** The style templates contain placeholders that must be replaced before outputting. Never leave these in the final prompt:
 - "(the language what users requested in the prompt)" → Replace with actual language (English, Hindi, Spanish, etc.)
 - "But the language should be what users said in the prompt" → Remove this sentence entirely and ensure the language instruction is clear elsewhere
@@ -111,7 +147,7 @@ Reason: [One sentence]
 
 **Content Brief first:** Before the design system, always include a 2-3 sentence brief about what the slide deck should contain and communicate, derived from the image/content the user provided. This helps NotebookLM understand the context before applying the design system.
 
-**Slide structure:** Always suggest a slide-by-slide breakdown (approx. 8-12 slides) with proposed content for each. Be specific about what each slide should cover based on the user's content.
+**Slide structure:** Always suggest a slide-by-slide breakdown (8-10 slides, NOT 12+) with proposed content for each. Be specific about what each slide should cover based on the user's content. Keep slide titles concise (40-60 characters max).
 
 **Infographic variant:** If the user asks for an infographic (single-image, not a deck), adapt the prompt to describe a single comprehensive visual layout instead of multi-slide structure.
 
@@ -238,4 +274,24 @@ Reason: Provides a more refined, architectural approach that may resonate better
 
 ## REFERENCE FILES
 
-- `references/style-library.md` — Full catalog of all 18 styles with complete prompts. Read this when generating the style section of the output.
+- `references/style-library.md` — Full catalog of all 26 styles with complete prompts. Read this when generating the style section of the output.
+- `utils/` — Character validation and analysis tools:
+  - `character-counter.js` — Validates 5000 character limit compliance
+  - `slide-analyzer.js` — Analyzes slide structure character distribution
+  - `placeholder-checker.js` — Validates all placeholders are resolved
+  - See `utils/README.md` for usage instructions
+
+## VALIDATION WORKFLOW (RECOMMENDED)
+
+After generating a prompt, agents should mentally validate:
+1. **Character count** — Estimate ~4000-4500 chars (safe range)
+2. **Placeholders** — All "(the language...)" replaced with actual language
+3. **Slide count** — 8-10 slides, not 12+
+4. **Slide titles** — Each 40-60 characters max
+5. **Markdown warning** — "Do not include Markdown symbols..." present
+
+For precise validation, save output and run:
+```bash
+node utils/character-counter.js prompt.txt
+node utils/placeholder-checker.js prompt.txt
+```

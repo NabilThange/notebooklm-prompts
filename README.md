@@ -1,46 +1,47 @@
 # NotebookLM Prompt Designer
 
-> **A Kiro skill that generates professional NotebookLM slide prompts from any content**
+Transform any screenshot, image, or topic into a complete, ready-to-paste NotebookLM / Kael.im slide or infographic prompt with a full design system.
 
-## 🎯 What This Does
+## What This Does
 
-Drop an image, screenshot, or describe a topic → Get a complete, copy-paste-ready NotebookLM prompt with professional design specifications.
+This prompt engineering system analyzes your content (images, screenshots, text, or topics) and generates professional NotebookLM slide prompts with:
 
-This skill transforms your raw content into polished slide deck prompts by:
+- **26 curated design styles** covering everything from business reports to creative portfolios
+- **Complete design systems** with typography, colors, layouts, and visual rules
+- **Slide-by-slide breakdowns** tailored to your content
+- **Language detection** and proper placeholder resolution
+- **Infographic mode** for single-page designs
 
-1. **Analyzing your content** - Understands context, audience, and purpose
-2. **Selecting the perfect design style** - Chooses from 26 professional templates
-3. **Generating complete specifications** - Typography, colors, layouts, visual rules
-4. **Creating slide-by-slide structure** - Tailored breakdown with suggested titles
-5. **Resolving all placeholders** - Language detection, concrete examples, ready to use
+## Installation
 
-**No manual editing needed.** Just paste the output into NotebookLM and generate your slides.
-
-> ⚠️ **Character Limit:** NotebookLM has a 5000 character input limit. This skill generates optimized prompts that stay within this constraint.
-
-## ✨ Key Features
-
-- **26 curated design styles** - Business, creative, tech, lifestyle, and specialized templates
-- **Complete design systems** - Full color palettes, typography specs, layout variations
-- **Smart style matching** - Automatic recommendation based on your content
-- **Language detection** - Works in any language with proper placeholder resolution
-- **Infographic mode** - Single-page designs for visual summaries
-- **Customization support** - Request dark mode, more color, minimalism, or style mixing
-
-## 📦 Installation
+### For Kiro IDE Users
 
 ```bash
 npx skill install notebooklm-prompt-designer
 ```
 
-## 🚀 Usage
+### For Other AI Assistants (Claude, ChatGPT, etc.)
 
-The skill automatically activates when you:
+Copy the contents of `SKILL.md` and paste it into your AI assistant as a system prompt or custom instruction. Then use it with any image or content you want to turn into NotebookLM slides.
 
-- 📸 Upload an image and ask for a NotebookLM prompt
-- 💬 Say "make slides from this" or "create a presentation prompt"
-- 🎨 Mention NotebookLM, slides, or presentation design
-- 📊 Ask to turn content into a designed slide deck
+## Usage
+
+### In Kiro IDE
+
+The skill automatically triggers when you:
+
+- Upload an image and ask for a NotebookLM prompt
+- Say "make slides from this" or "create a presentation prompt"
+- Mention NotebookLM, Kael.im, slides, or presentation design
+- Ask to turn content into a designed slide deck
+
+### In Other AI Assistants
+
+After loading the SKILL.md as instructions, simply:
+
+1. Upload an image/screenshot OR describe your topic
+2. Ask: "Create a NotebookLM prompt for this"
+3. Copy the generated prompt and paste it into NotebookLM
 
 ### Example Prompts
 
@@ -49,160 +50,84 @@ The skill automatically activates when you:
 "Make slides from this product feature"
 "Generate a presentation prompt for my startup pitch"
 "Turn this into an infographic prompt"
-"Design a slide deck about [topic] in minimal style"
+"Design a deck about [your topic]"
 ```
 
-## 💡 Real-World Examples
+## Available Styles
 
-### Scenario 1: Topic-Based Generation
-Just give any AI agent a topic, and this skill generates a complete NotebookLM prompt:
+The skill includes 26 professional design styles:
 
-**You say:**
-```
-"Create a NotebookLM prompt about AI automation in healthcare"
-```
+### Business & Professional
+- **A1: Modern Newspaper** - Business reports, economic analysis, data-heavy content
+- **A2: Sharp-Edged Minimalism** - Portfolio, consulting, premium brand decks
+- **A5: Seminar / Minimal Text** - Academic seminars, conference talks
+- **G2: Dark Founder Minimal** - Startup pitches, founder brands, VC presentations
+- **G7: SaaS Friendly Bold** - B2B SaaS, HR tools, marketplace products
 
-**The skill delivers:**
-- Analyzes the topic (healthcare + AI + automation)
-- Recommends appropriate style (e.g., "Modern Newspaper" for professional credibility)
-- Generates complete prompt with medical color palette, clean typography
-- Suggests 8-10 slide structure covering problem, solution, case studies, ROI
-- Ready to paste into NotebookLM → instant professional deck
+### Creative & Editorial
+- **A3: Yellow × Black Editorial** - Fashion, trend reports, bold brand statements
+- **A4: Black × Orange Creative Agency** - Creative agency pitches, product launches
+- **G3: Gallery Serif Editorial** - Art galleries, creative studios, cultural institutions
+- **G6: Creative Industry Directory Editorial** - Agency rosters, talent directories
+- **G8: French Candy Brutalist** - Creative agencies, youth brands, playful products
 
-### Scenario 2: Style-Matching from Visual Reference
-Upload a screenshot of any design you like + your topic, and get a matching prompt:
+### Tech & Developer
+- **D4: Tech / Art / Neon** - AI, tech research, architecture of ideas
+- **D5: Anti-Gravity / Living Artifact** - AI products, agent systems, infrastructure
+- **D6: Neo-Retro Dev Deck** - Developer tools, coding products, startup pitches
+- **G1: Blueprint Technical Manual** - Software docs, technical education, engineering
+- **G4: Apple-Adjacent Product Minimal** - macOS/iOS apps, indie software
 
-**You say:**
-```
-[Upload screenshot of Apple Keynote slide]
-"Make a presentation about our new SaaS product in this style"
-```
+### Lifestyle & Consumer
+- **B2: Magazine Style** - Consumer content, lifestyle brands, beauty/wellness
+- **B3: Pink Street-Style** - Youth brands, streetwear, Gen-Z products
+- **B4: Digital / Neo / Pop** - Community platforms, social apps, data visualization
+- **C1: Mincho × Handwritten Mix** - Fashion editorial, cultural content
 
-**The skill delivers:**
-- Analyzes the visual style (minimal, lots of whitespace, sans-serif, muted colors)
-- Matches to "Apple-Adjacent Product Minimal" or "Sharp-Edged Minimalism"
-- Extracts color palette from your screenshot
-- Generates prompt that replicates the aesthetic for YOUR content
-- Your SaaS deck now has that premium Apple-like feel
+### Specialized
+- **B1: Manga Style** - Educational content, storytelling, making complex info fun
+- **D1: Deformed Flat Persona** - Character-driven content, friendly explainers
+- **D2: Royal Blue × Red Watercolor** - Artistic presentations, creative portfolios
+- **D3: Classic / Pop (Sculpture × Vaporwave)** - Bold brand statements, edgy marketing
+- **E1: Studio / Mockup / Premium** - Product launches, SaaS showcases
+- **F1: Sports / Athletic / Energy** - Sports brands, athletic products, high-energy pitches
+- **G5: Natural Wine Brutalist Editorial** - Artisan food/beverage, wine, craft industry
 
-### Scenario 3: Quick Infographic from Data
-Turn any data or concept into a single-page visual:
+## Features
 
-**You say:**
-```
-"Create an infographic prompt showing our Q4 metrics"
-```
-
-**The skill delivers:**
-- Switches to infographic mode (single page layout)
-- Recommends data-friendly style with chart support
-- Structures sections for KPIs, trends, comparisons
-- Ready-to-use prompt for visual dashboard
-
-### Scenario 4: Brand-Consistent Decks
-Already have brand guidelines? Feed them in:
-
-**You say:**
-```
-[Upload brand style guide]
-"Make a sales deck prompt using our brand colors and fonts"
-```
-
-**The skill delivers:**
-- Extracts your brand colors, fonts, logo placement rules
-- Generates custom prompt matching YOUR brand system
-- Every slide follows your guidelines
-- Consistent with your existing materials
-
-## 🎨 Available Styles
-
-Choose from 26 professional design templates organized by category:
-
-### 💼 Business & Professional
-
-| Style | Best For |
-|-------|----------|
-| **A1: Modern Newspaper** | Business reports, economic analysis, data-heavy content |
-| **A2: Sharp-Edged Minimalism** | Portfolio, consulting, premium brand decks |
-| **A5: Seminar / Minimal Text** | Academic seminars, conference talks |
-| **G2: Dark Founder Minimal** | Startup pitches, founder brands, VC presentations |
-| **G7: SaaS Friendly Bold** | B2B SaaS, HR tools, marketplace products |
-
-### 🎭 Creative & Editorial
-
-| Style | Best For |
-|-------|----------|
-| **A3: Yellow × Black Editorial** | Fashion, trend reports, bold brand statements |
-| **A4: Black × Orange Creative Agency** | Creative agency pitches, product launches |
-| **G3: Gallery Serif Editorial** | Art galleries, creative studios, cultural institutions |
-| **G6: Creative Industry Directory Editorial** | Agency rosters, talent directories |
-| **G8: French Candy Brutalist** | Creative agencies, youth brands, playful products |
-
-### 💻 Tech & Developer
-
-| Style | Best For |
-|-------|----------|
-| **D4: Tech / Art / Neon** | AI, tech research, architecture of ideas |
-| **D5: Anti-Gravity / Living Artifact** | AI products, agent systems, infrastructure |
-| **D6: Neo-Retro Dev Deck** | Developer tools, coding products, startup pitches |
-| **G1: Blueprint Technical Manual** | Software docs, technical education, engineering |
-| **G4: Apple-Adjacent Product Minimal** | macOS/iOS apps, indie software |
-
-### 🛍️ Lifestyle & Consumer
-
-| Style | Best For |
-|-------|----------|
-| **B2: Magazine Style** | Consumer content, lifestyle brands, beauty/wellness |
-| **B3: Pink Street-Style** | Youth brands, streetwear, Gen-Z products |
-| **B4: Digital / Neo / Pop** | Community platforms, social apps, data visualization |
-| **C1: Mincho × Handwritten Mix** | Fashion editorial, cultural content |
-
-### 🎪 Specialized
-
-| Style | Best For |
-|-------|----------|
-| **B1: Manga Style** | Educational content, storytelling, making complex info fun |
-| **D1: Deformed Flat Persona** | Character-driven content, friendly explainers |
-| **D2: Royal Blue × Red Watercolor** | Artistic presentations, creative portfolios |
-| **D3: Classic / Pop (Sculpture × Vaporwave)** | Bold brand statements, edgy marketing |
-| **E1: Studio / Mockup / Premium** | Product launches, SaaS showcases |
-| **F1: Sports / Athletic / Energy** | Sports brands, athletic products, high-energy pitches |
-| **G5: Natural Wine Brutalist Editorial** | Artisan food/beverage, wine, craft industry |
-
-## ⚙️ How It Works
-
-### 1. Smart Style Matching
-Analyzes your content and recommends the best style based on:
+### Smart Style Matching
+The skill analyzes your content and recommends the best style based on:
 - Content type and subject matter
-- Target audience and tone
-- Use case and context
+- Target audience
+- Tone and mood
+- Use case
 
-### 2. Complete Design Systems
+### Complete Design Systems
 Each generated prompt includes:
-- 🎨 Full color palette with hex codes
-- 📝 Typography specifications (fonts, sizes, weights)
-- 📐 Layout variations for different slide types
-- ✨ Visual style guidelines and design rules
-- 🚫 Design prohibitions (what to avoid)
+- Full color palette with hex codes
+- Typography specifications
+- Layout variations for different slide types
+- Visual style guidelines
+- Design rules and prohibitions
 
-### 3. Placeholder Resolution
-All placeholders are automatically filled:
-- 🌍 Language detection and specification
-- 📋 Content-specific details
-- 📌 Concrete slide titles suggested
-- ✅ No manual editing required
+### Placeholder Resolution
+All placeholders are automatically resolved:
+- Language detection and specification
+- Content-specific details filled in
+- Concrete slide titles suggested
+- No manual editing required
 
-### 4. Customization Support
-Request modifications on the fly:
-- 🌙 "Make it darker" → Dark mode variant
-- 🌈 "More colorful" → Expanded palette
-- ⚪ "More minimal" → Increased whitespace
-- 📊 "Add data visualization" → Charts and graphs
-- 🎨 "Mix two styles" → Hybrid designs
+### Customization Support
+Request modifications like:
+- "Make it darker" (dark mode)
+- "More colorful" (expanded palette)
+- "More minimal" (increased whitespace)
+- "Add data visualization" (charts and graphs)
+- "Mix two styles" (hybrid designs)
 
-## 📄 Output Format
+## Output Format
 
-The skill generates a complete, copy-paste-ready prompt:
+The skill generates a complete, copy-paste-ready prompt with:
 
 ```
 ═══════════════════════════════════════════
@@ -232,50 +157,37 @@ Tone: [Appropriate tone for content]
 ═══════════════════════════════════════════
 ```
 
-## 🔧 Requirements
+## Requirements
 
-- Kiro IDE with skills support
+- **For Kiro IDE**: Skills support enabled
+- **For other AI assistants**: Any AI that accepts custom instructions and can process images (Claude, ChatGPT, Gemini, etc.)
 - No additional dependencies
 
-## 🧰 Utility Tools
+## Platform Compatibility
 
-The skill includes validation utilities in `utils/` for verifying generated prompts:
+This prompt engineering system works with:
+- ✅ Kiro IDE (as a skill)
+- ✅ Claude (Anthropic)
+- ✅ ChatGPT (OpenAI)
+- ✅ Gemini (Google)
+- ✅ Any AI assistant that supports custom instructions and image analysis
 
-- **character-counter.js** - Validates 5000 character limit, shows section breakdown
-- **slide-analyzer.js** - Analyzes slide structure, identifies verbose titles
-- **placeholder-checker.js** - Ensures all placeholders are resolved
-
-See `utils/README.md` for usage instructions.
-
-**Quick validation:**
-```bash
-node utils/character-counter.js my-prompt.txt
-node utils/placeholder-checker.js my-prompt.txt
-```
-
-## 🤝 Contributing
+## Contributing
 
 Found a bug or want to suggest a new style? Open an issue or submit a pull request!
 
-## 📜 License
+## License
 
-MIT License - See [LICENSE](LICENSE) file for details
+MIT License - See LICENSE file for details
 
-## 👤 Author
+## Author
 
-**Nabil Thange** - Full-Stack Developer & Creative Technologist
+Created with ❤️ for the AI and design community
 
-Building at the intersection of AI, design, and developer tools. Passionate about creating tools that enhance creative workflows and make complex tasks accessible.
+## Version
 
-- 🌐 Portfolio: [nabil-thange.vercel.app](https://nabil-thange.vercel.app/)
-- 💼 LinkedIn: [linkedin.com/in/nabil-thange](https://www.linkedin.com/in/nabil-thange/)
+1.0.0 - Initial release with 26 design styles
 
-Created with ❤️ for the Kiro community
+## Why This Exists
 
-## 📌 Version
-
-**1.0.0** - Initial release with 26 design styles
-
----
-
-**Ready to create beautiful slide decks?** Install the skill and start designing!
+NotebookLM is powerful but requires detailed design instructions to create professional slides. This system provides battle-tested design systems and prompt structures that consistently produce high-quality results - whether you're using it in Kiro, Claude, ChatGPT, or any other AI assistant.

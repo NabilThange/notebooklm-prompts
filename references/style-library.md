@@ -129,7 +129,60 @@ Layout Variations (Catalog):
 **Colors:** Yellow bg, Black text, fashion photography
 
 ```
-Yellow background, black text, large dynamic modern serif font placement, stylish, photos are unique fashion photography, with pop and chic touches like handwriting or stickers scattered throughout, bold layout like a fashion magazine
+# presentation_design_spec_fashion_editorial_jp.yaml
+# Style: Yellow × Black Editorial / Fashion Magazine
+# Concept: "Bold, Chic, and Unapologetically Fashion-Forward"
+
+Global Design Settings:
+  Tone: "High-fashion editorial meets street-style energy — confident, bold, and visually arresting"
+  Color Palette:
+    Background: "#FFD700 (vibrant yellow) or #FFEB3B (bright sunshine yellow)"
+    Primary Text: "#000000 (pure black)"
+    Accent: "#FFFFFF (white — used sparingly for contrast on dark photo zones)"
+    Photo Treatment: "Full-color fashion photography with high contrast and saturation"
+  Typography:
+    Display Headlines: "Large dynamic modern serif — Didot, Bodoni, Playfair Display, or Editorial New. Weight: Bold to Black (700–900). Size: 80–150px. Dramatic placement — diagonal, vertical, or bleeding off edges. Mixed case with intentional line breaks for visual rhythm."
+    Body Copy: "Sans-serif for readability — Helvetica, Inter, or DM Sans. Regular (400), 16–20px, tight leading (1.3–1.4). Used sparingly — fashion speaks through images."
+    Handwritten Elements: "Brush script or marker fonts for annotations — Permanent Marker, Caveat, or authentic handwriting. Size: 24–40px. Rotated 5–15° for organic feel."
+    Labels/Captions: "Small uppercase sans-serif, tracked wide (+150–300), 11–13px. Used for photo credits, page numbers, section markers."
+  Visual Style:
+    - Fashion photography as hero: high-quality editorial shots, unique angles, bold poses, movement captured
+    - Photos cropped into dynamic shapes: diagonal cuts, circular cutouts, irregular polygons
+    - Layered composition: photos overlap text, text overlaps photos — intentional visual tension
+    - Handwritten annotations scattered throughout: circled words, arrows pointing to key elements, margin notes
+    - Sticker-like elements: small graphic badges, stars, hearts, geometric shapes placed as if physically stuck on
+    - Collage aesthetic: elements appear assembled rather than designed — controlled chaos
+    - High contrast: pure black text on vibrant yellow creates maximum impact
+
+Layout Variations:
+  - Type: "Cover / Hero" / Design: "Full-bleed yellow background. Large fashion photo positioned off-center (left or right 60%), cropped dynamically. Enormous serif headline overlapping photo edge, partially on yellow, partially on photo. Small handwritten annotation circling a key word. Page number in corner as small sticker element."
+  
+  - Type: "Statement Slide" / Design: "Pure yellow background. Massive serif headline in black, 2–3 lines, filling 70% of canvas. One word underlined with hand-drawn marker stroke. Small sans-serif body text in bottom corner. Tiny sticker graphic (star or circle) as punctuation."
+  
+  - Type: "Photo Feature" / Design: "Yellow background with large fashion photo cropped into irregular shape (not rectangle). Photo positioned diagonally or at angle. Black serif headline wrapping around photo edge. Handwritten caption in margin with arrow pointing to photo detail. Small geometric stickers scattered in negative space."
+  
+  - Type: "Grid Collage" / Design: "Yellow background. 2–3 fashion photos at different sizes, overlapping slightly. Each photo has hand-drawn border or circle around it. Black serif headlines between photos. Handwritten notes connecting elements with drawn lines."
+  
+  - Type: "Text + Photo Split" / Design: "Vertical or diagonal split. One side: pure yellow with large black serif headline + body copy. Other side: full-bleed fashion photo. Handwritten text crossing the boundary between zones. Sticker elements on the dividing line."
+  
+  - Type: "Detail Focus" / Design: "Extreme close-up fashion photography (fabric texture, accessory detail, makeup) occupying 50% of canvas. Yellow background on other half with large serif callout text. Hand-drawn circle or arrow highlighting the detail. Margin notes in handwriting."
+  
+  - Type: "Layered Typography" / Design: "Yellow background. Multiple text layers: large serif headline behind, medium sans-serif body in front, handwritten annotations on top. Fashion photo as small cutout element placed within text composition. Creates depth through layering."
+  
+  - Type: "Magazine Spread" / Design: "Horizontal layout mimicking magazine spread. Left page: yellow with serif headline + intro text. Right page: large fashion photo bleeding to edges. Handwritten page numbers in corners. Small sticker elements bridging the gutter."
+
+Design Rules:
+  - "Fashion photography must be high-quality, editorial-style — avoid generic stock photos. Unique angles, bold poses, movement, and personality required."
+  - "Serif headlines should be placed dynamically — diagonal, vertical, overlapping photos, bleeding off edges. Never centered and static."
+  - "Handwritten elements must feel authentic — actual handwriting or convincing script fonts only. Rotate 5–15° for organic placement."
+  - "Stickers and graphic elements should be small and scattered — they accent, not dominate. Think of them as editorial punctuation."
+  - "Photos can be cropped into any shape except boring rectangles — circles, diagonal cuts, irregular polygons all encouraged."
+  - "Text and photos must interact — overlapping, wrapping, intersecting. Avoid isolated elements floating in space."
+  - "The yellow background is bold and unapologetic — embrace the high contrast with pure black text."
+  - "Maintain fashion magazine energy — every slide should feel like it could be torn from Vogue, i-D, or Dazed."
+  - "Avoid: timid layouts, small photos, centered compositions, corporate fonts, low-contrast photography, and anything that feels safe or conservative."
+
+Do not include Markdown symbols (#, *, **) in any slide text. Plain text only.
 ```
 
 ---
@@ -141,7 +194,57 @@ Yellow background, black text, large dynamic modern serif font placement, stylis
 **Colors:** White bg, Black text, Blood Orange accent
 
 ```
-Background is white, text is black, accent color is blood orange, stylish design that a creative agency might create, incorporating dynamic and simple photos and English typography. But the language should be what users said in the prompt.
+# Style: Black × Orange Creative Agency
+# Concept: "Bold Simplicity Meets Creative Confidence"
+
+Global Design Settings:
+  Tone: "Modern creative agency aesthetic — confident, dynamic, visually striking without overdesign"
+  Color Palette:
+    Background: "#FFFFFF (pure white)"
+    Primary Text: "#000000 (pure black)"
+    Accent: "#FF4500 (blood orange / vermillion) — used strategically for emphasis"
+    Photography: "Full-color, high-contrast, editorial quality"
+  Typography:
+    Display Headlines: "Bold geometric sans-serif — Helvetica Now Display Bold, Inter Bold, DM Sans Bold. Weight: 700–800. Size: 60–120px. Tight tracking (−0.02em). Mixed case or uppercase depending on context. Large English typography as visual anchor."
+    Body Copy: "Same sans family, Regular (400), 16–18px, line height 1.6. Black text. Language should be what users said in the prompt."
+    Accent Text: "Blood orange color applied to single words or short phrases for emphasis — never full paragraphs."
+    Labels: "Uppercase sans, 11–13px, tracked wide (+150), black or orange."
+  Visual Style:
+    - Dynamic photography: candid moments, movement, authentic energy — not posed studio shots
+    - Simple photo treatment: clean crops, high contrast, no filters or heavy editing
+    - Asymmetric layouts: content positioned off-center for visual tension
+    - Generous whitespace: breathing room around all elements
+    - Orange used as strategic accent: underlines, highlight blocks, single words, geometric shapes
+    - Minimal graphic elements: thin lines, simple circles, basic geometric shapes in orange
+    - Typography as design element: large English words create visual structure
+
+Layout Variations:
+  - Type: "Hero Statement" / Design: "White background. Enormous black headline spanning full width, 2–3 lines. One key word in blood orange. Small body text below in black. Dynamic photo positioned bottom-right, cropped to show energy/movement. Orange geometric accent (circle or line) near photo."
+
+  - Type: "Photo + Text Split" / Design: "Vertical split. Left 50%: large dynamic photo bleeding to edges. Right 50%: white space with black headline, body copy, orange accent line or word. Asymmetric alignment — text not centered."
+
+  - Type: "Minimal Statement" / Design: "Pure white canvas. Single black headline, 2 lines, positioned top-left or center. One word highlighted in orange. Small photo element (20% canvas) bottom-right. Maximum negative space."
+
+  - Type: "Grid Feature" / Design: "White background. 2×2 or 3-column grid of photos, each with small black caption. Orange accent appears once — as underline, border, or highlighted word in one caption. Clean gutters between images."
+
+  - Type: "Text Emphasis" / Design: "Large black headline filling 60% of canvas. Strategic orange highlights: single word, underline stroke, or geometric shape behind text. Small supporting photo in corner. Whitespace dominant."
+
+  - Type: "Diagonal Dynamic" / Design: "Photo placed diagonally across canvas (rotated 5–15°). Black headline overlapping photo edge. Orange accent line or shape creating visual connection between text and image."
+
+  - Type: "Layered Composition" / Design: "Large black typography as background layer. Photo element overlapping text (40% canvas). Orange accent shape (circle, rectangle) behind photo creating depth. Clean layering hierarchy."
+
+Design Rules:
+  - "Orange appears maximum 2–3 times per slide — strategic emphasis only, never decoration"
+  - "Photography must show energy and authenticity — avoid generic stock imagery"
+  - "Whitespace is structural — minimum 30% of canvas should be empty white"
+  - "Headlines use bold weight only — never light or thin weights"
+  - "Asymmetric layouts preferred — avoid centered, symmetrical compositions"
+  - "Photos can overlap text or bleed off edges — embrace dynamic cropping"
+  - "Typography should be large and confident — small text is for body copy only"
+  - "Language for body text should be what users said in the prompt, but English typography for visual impact is encouraged"
+  - "Avoid: gradients, multiple accent colors, busy patterns, heavy borders, drop shadows, and overly polished corporate aesthetics"
+
+Do not include Markdown symbols (#, *, **) in any slide text. Plain text only.
 ```
 
 ---
@@ -297,7 +400,7 @@ Yellow background, black text, large dynamic modern serif font placement, stylis
 **Mood:** Artistic, painterly, expressive
 
 ```
-Shades of royal Blue and Red wet watercolor. Focus on different artistic styles to be used with kael/notebooklm Slides decks.
+Create slides with a wet watercolor aesthetic using royal blue and red as primary colors. Apply watercolor textures with soft edges, color bleeding, and organic paint flow. Use varying opacity levels to create depth — darker saturated areas for emphasis, lighter washes for backgrounds. Incorporate white space as unpainted canvas areas. Text should be placed on clean white zones or overlaid on light watercolor washes. Blend colors where they meet to create natural purple transitions. Add subtle paper texture underneath. Style should feel artistic, expressive, and hand-painted rather than digital. Avoid hard edges and geometric shapes — everything should have the organic, flowing quality of watercolor on paper.
 ```
 
 ---
